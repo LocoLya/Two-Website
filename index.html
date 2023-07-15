@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+
+	<svg display="none">
+		<symbol id="star" viewBox="0 0 24 24">
+			<path d="M11.0137 2.76683C11.379 1.89022 12.6208 1.89022 12.9861 2.76683L14.9102
+			 7.38462C15.0654 7.75726 15.4295 8 15.8332 8H20.893C21.8234 8 22.2893 9.12483 
+			 21.6314 9.78268L17.5391 13.875C17.2823 14.1318 17.185 14.5076 17.2847 14.8568L18.9076 
+			 20.5369C19.1816 21.496 18.1122 22.2767 17.2822 21.7234L12.5546 18.5716C12.2187 18.3477
+			  11.7811 18.3477 11.4452 18.5717L6.72544 21.7182C5.89284 22.2732 4.81988 21.49 5.09479
+			   20.5279L6.71509 14.8568C6.81486 14.5076 6.71747 14.1318 6.46068 13.875L2.38859 
+			   9.8029C1.72328 9.13758 2.19448 8 3.13538 8H8.16658C8.57028 8 8.93438 7.75726 9.08965
+			    7.38462L11.0137 2.76683Z" />
+		</symbol>
+		<symbol id="instagram" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"/>
+			<path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"/>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" />
+		</symbol>
+		<symbol id="twitter" viewBox="0 0 24 24">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z"/>
+		</symbol>
+		<symbol id="facebook" viewBox="0 0 14.906 32">
+			<path d="M14.874,11.167 L14.262,14.207 C14.062,15.208 13.100,15.992 12.072,15.992 L10.000,15.992 L10.000,30.000 C10.000,31.104 9.159,32.000 8.049,32.000 L5.030,32.000 C3.920,32.000 3.017,31.102 3.017,29.999 L3.017,15.992 L2.011,15.992 C0.901,15.992 -0.002,15.095 -0.002,13.991 L-0.002,10.990 C-0.002,9.887 0.901,8.989 2.011,8.989 L3.017,8.989 L3.017,6.003 C3.017,2.716 5.693,0.041 8.994,0.013 C9.015,0.012 9.033,0.001 9.055,0.001 L13.081,0.001 C13.636,0.001 14.000,0.448 14.000,1.000 L14.000,6.000 C14.000,6.553 13.636,7.004 13.081,7.004 L10.061,7.004 L10.060,8.989 L13.079,8.989 C13.645,8.989 14.167,9.228 14.509,9.644 C14.852,10.059 14.985,10.615 14.874,11.167 ZM9.092,10.990 C9.078,10.991 9.067,10.998 9.053,10.998 L9.053,10.998 C8.497,10.997 8.046,10.549 8.047,9.997 L8.047,9.990 C8.047,9.990 8.047,9.990 8.047,9.990 C8.047,9.990 8.047,9.990 8.047,9.990 L8.049,6.003 C8.049,5.450 8.499,5.003 9.055,5.003 L12.074,5.003 L12.074,2.002 L9.094,2.002 C9.077,2.002 9.063,2.011 9.045,2.011 C6.831,2.011 5.030,3.802 5.030,6.003 L5.030,10.005 C5.030,10.558 4.579,11.006 4.023,11.006 C3.996,11.006 3.973,10.992 3.946,10.990 L2.011,10.990 L2.011,13.991 L4.023,13.991 C4.579,13.991 5.030,14.439 5.030,14.992 C5.030,15.044 5.008,15.088 5.000,15.138 L5.000,30.000 L8.049,29.999 L8.049,15.002 C8.049,14.998 8.047,14.995 8.047,14.992 C8.047,14.439 8.497,13.991 9.053,13.991 L12.072,13.991 C12.145,13.991 12.275,13.886 12.288,13.816 L12.857,10.990 L9.092,10.990 Z"/>
+		</symbol>
+	</svg>
+
+
+
+	<div class="header">
+		<div class="header-menu">	
+			<div class="header-logo">
+				<img src="img/Vector.png" alt="">
+			</div>
+			<div class="nav">
+				<a href="#" class="">Home</a>
+				<a href="#" class="">Episodes</a>
+				<a href="#" class="">About</a>
+				<a href="#" class="">Contact</a>
+			</div>
+		</div>
+		<div class="screen-content">
+			<div class="screen-img">
+				<img src="img/nigger.png" alt="">
+			</div>
+			
+			<div class="screen-intro">
+				<div class="screen-title">
+					<h1>Take your <br>podcast to the<br> next <span>level</span></h1>
+				</div>
+				<div class="music-list">
+					<p>Listen on</p>
+					<div class="apps">
+						<img src="img/icons/IMAGE.png" alt="">
+						<img src="img/icons/IMAGE4.png" alt="">
+						<img src="img/icons/IMAGE2.png" alt="">
+						<img src="img/icons/IMAGE3.png" alt="">
+						<img src="img/icons/IMAGE1.png" alt="">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="episodes">
+			<div class="episodes-header">
+				<h1 class="episodes-title">Latest episodes</h1>
+				<div class="button first-button">
+					<p>View all episodes</p>
+				</div>
+
+			</div>
+			<div class="episodes-slide">
+				<div class="slide">
+					<div class="slide-img">
+						<img src="img/episode/Frame (1).png" alt="">
+					</div>
+					<div class="slide-content">
+						<p class="gear">Gear</p>
+						<p class="epis">Episode 3</p>
+						<h1 class="slide-intro">Should you get<br>
+							outboard audio gear?
+						</h1>
+						<p class="slide-subtitle">Is hardware really worth it when it comes
+							 to podcasting? The answer is...it depends.
+							  Here’s our reasons on why you might want to consider picking something up.
+							</p>
+							  
+						 <div class="button">View Episode Details</div>
+					</div>
+				</div>
+
+				<div class="slide">
+					<div class="slide-img">
+						<img src="img/episode/IMAGE.png" alt="">
+					</div>
+					<div class="slide-content">
+						<p class="gear">Tips & Tricks</p>
+						<p class="epis">Episode 2</p>
+						<h1 class="slide-intro">Mic tricks to take <br> you to the next level
+						</h1>
+						<p class="slide-subtitle">Stop rolling with those default settings on your mic.
+							These small tweaks will take you from sounding good to great.
+						</p>
+						
+						<div class="button">View Episode Details</div>
+					</div>
+				</div>
+				
+				<div class="slide">
+					<div class="slide-img">
+						<img src="img/episode/IMAGE (1).png" alt="">
+					</div>
+					<div class="slide-content">
+						<p class="gear">Gear</p>
+						<p class="epis">Episode 1</p>
+						<h1 class="slide-intro">The best microphone<br> under $200
+						</h1>
+						<p class="slide-subtitle">With so many microphones on the market, how are you supposed to know
+							 what’s the best? Take a look at our top picks.
+							</p>
+							  
+						 <div class="button">View Episode Details</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="niger">
+			<div class="niger-info">
+				<div class="button circle-button">
+					<img src="img/right.png" alt="">
+				</div>
+				<div class="epis">Meet your host</div>
+				<h1 class="slide-intro">Jacob Paulaner</h1>
+				<p class="slide-subtitle">Jacob has a background in audio engineering, and has been podcasting
+					since the early days.</p>
+				
+				<p class="slide-subtitle">He’s here to help you level up your game by sharing everything <br>he’s
+					learned along the way.</p>
+			</div>
+			<div class="nigger-img">
+				<img src="img/nigger2.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="subscribe">
+			<div class="subscribe-info">
+				<p class="epis">Email Newsletter</p>
+				<h1 class="slide-intro">Subscribe <br> for updates</h1>
+			</div>
+			<div class="registrate-input">
+				<div class="login-name">
+					<input type="text" id="username" name="Username" placeholder="Name">
+					<br>
+					<input type="email" id="email" name="Email" placeholder="Email">
+					<br>
+					<button id="btn">Submit</button>
+
+				</div>
+			</div>
+			<div class="stripe-left"></div>
+			<div class="stripe-center"></div>
+			<div class="stripe-right"></div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="profits">
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">I can’t recommend this podcast enough</div>
+				<div class="profit-user">Betty Lacey</div>
+			</div>
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">Jacob is the best in the business</div>
+				<div class="profit-user">Adam Driver</div>
+			</div>
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement nothanks">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">A wealth of audio knowledge</div>
+				<div class="profit-user">Marcus Brow</div>
+			</div>
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">Every episode is a gem!</div>
+				<div class="profit-user">Jessica Know</div>
+			</div>
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement nothanks">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement nothanks">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">Whoa whoa, let me take some notes!</div>
+				<div class="profit-user">Scott Adams</div>
+			</div>
+			<div class="profit">
+				<div class="assements">
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement">
+						<use xlink:href="#star"></use>				
+					</svg>
+					<svg class="assement nothanks">
+						<use xlink:href="#star"></use>				
+					</svg>
+				</div>
+				<div class="profit-title">I’ve upped my game considerably since I started listening</div>
+				<div class="profit-user">Steven Blast</div>
+			</div>
+		</div>
+	<div class="contact">
+		<div class="share">
+			<div class="end-logo">
+				<img src="img/Vector.png" alt="">
+			</div>
+			<div class="icons">
+				<svg class="instagram-logo">
+					<use xlink:href="#instagram"></use>
+				</svg>
+				<svg class="twitter-logo">
+					<use xlink:href="#twitter"></use>
+				</svg>
+				<svg class="facebook-logo">
+					<use xlink:href="#facebook"></use>
+				</svg>
+				
+
+			</div>
+		</div>
+		<div class="xz">
+			<p>Home</p>
+			<p>About</p>
+			<p>Episodes</p>
+			<p>Contact</p>
+		</div>
+		<div class="xz-2">
+			<p>Style Guide</p>
+			<p>Instructions</p>
+			<p>Changelog</p>
+			<p>Credit</p>
+			<p>Powered by Webflow</p>
+			<p>Licenses</p>
+		</div>
+		<div class="apps">
+			<img src="img/icons/IMAGE.png" alt="">
+			<img src="img/icons/IMAGE4.png" alt="">
+			<img src="img/icons/IMAGE2.png" alt="">
+			<img src="img/icons/IMAGE3.png" alt="">
+			<img src="img/icons/IMAGE1.png" alt="">
+		</div>
+	</div>
+	</div>
+
+	<script src="js/app.js"></script>
+</body>
+</html>  
